@@ -1,0 +1,49 @@
+.page-header {
+  position: relative;
+  aspect-ratio: 100/4;
+}
+
+.page-logo {
+  position: absolute;
+  top: clamp(0.1rem, 0.9vw ,1rem);
+  left: 3rem;
+  width: clamp(2rem, 16vw ,18rem);
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  padding-inline: 1rem;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin-block-start: -0.25rem;
+  height: 100%;
+  max-height: 3.5rem;
+}
+
+/* For responsiveness */
+.nav-item {
+  height: 100%;
+
+  button {
+    height: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: unset;
+  }
+
+  span {
+    font-size: clamp(0.5rem, 2vw, 1.25rem);
+  }
+}

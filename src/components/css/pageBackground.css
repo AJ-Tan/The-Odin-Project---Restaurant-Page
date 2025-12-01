@@ -1,0 +1,45 @@
+.bg-static-img {
+  height: 100vh;
+  width: auto;
+}
+
+.bg-video-container{
+  position: absolute;
+
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: -1;
+
+  * > {
+    height: 100%;
+  }
+}
+
+.bg-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+#bg-video {
+  position: absolute;
+  height: 100%;
+  transform: scale(1.1);
+}
+
+#bg-image {
+  position: relative;
+  z-index: -1;
+  transform: scale(1.1);
+}

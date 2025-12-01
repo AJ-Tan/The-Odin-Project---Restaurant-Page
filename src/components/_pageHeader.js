@@ -1,29 +1,29 @@
 import "./css/pageHeader.css";
-import buttonBg from "../asset/images/button-bg.webp";
-import headerBg from "../asset/images/header-bg.webp";
-import headerLogo from "../asset/images/hsr logo.webp";
+import { contentRoute } from "./contentRoute";
+import { btnStaticBg,pageHeaderBg,pageLogo } from "./assetImports";
+
 
 export const pageHeader = (() => {
 
-  const initialize = () => {
+  const init = () => {
     const pageHeaderNode = document.createElement("header");
     pageHeaderNode.classList.add("page-header");
 
     const pageLogoNode = document.createElement("img");
     pageLogoNode.classList.add("page-logo");
-    pageLogoNode.setAttribute("src", headerLogo);
+    pageLogoNode.setAttribute("src", pageLogo);
     pageHeaderNode.appendChild(pageLogoNode);
 
     const pageNavNode = document.createElement("nav");
     pageNavNode.classList.add("page-nav");
-    pageNavNode.style.backgroundImage = `url(${headerBg})`;
+    pageNavNode.style.backgroundImage = `url(${pageHeaderBg})`;
     pageHeaderNode.appendChild(pageNavNode);
 
     const navListNode = document.createElement("ul");
     navListNode.classList.add("nav-list");
     pageNavNode.appendChild(navListNode);
 
-    const btnList = [["btn-Home","Home"], ["btn-menu", "Menu"], ["btn-about", "About"]];
+    const btnList = [["btn-Home","Home", "home"], ["btn-menu", "Menu", "menu"], ["btn-about", "About", "about"]];
     btnList.forEach(btnData => {
       const listItemNode = document.createElement("li");
       listItemNode.classList.add("nav-item");
@@ -38,14 +38,17 @@ export const pageHeader = (() => {
     document.body.insertBefore(pageHeaderNode,contentNode);
   }
 
-  const headerButton = ([id, btnText]) => {
+  const headerButton = ([id, btnText, route]) => {
     const buttonNode = document.createElement("button");
     buttonNode.setAttribute("type", "button");
     buttonNode.classList.add("btn-header");
     buttonNode.id = id;
+    buttonNode.addEventListener("click", () => {
+      contentRoute(route);
+    })
     
     const buttonBgNode = document.createElement("img");
-    buttonBgNode.setAttribute("src", buttonBg);
+    buttonBgNode.setAttribute("src", btnStaticBg);
     buttonNode.appendChild(buttonBgNode);
 
     const buttonTextNode = document.createElement("span");
@@ -56,5 +59,5 @@ export const pageHeader = (() => {
     return buttonNode;
   }
 
-  return {initialize};
+  return {init};
 })();

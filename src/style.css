@@ -5,7 +5,9 @@
 }
 
 body {
-  overflow: hidden;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  min-height: 100vh;
 }
 
 button {
@@ -37,4 +39,8 @@ img {
   color: white;
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.div-content {
+  
 }

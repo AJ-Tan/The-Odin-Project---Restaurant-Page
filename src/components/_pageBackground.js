@@ -1,27 +1,39 @@
 import "./css/pageBackground.css";
-import bgVideo from "../asset/video/bg-video.mp4";
-import bgImg from "../asset/images/bg-static.jpeg";
 
-export const pageBackground = () => {
-  const bgVideoContainerNode = document.createElement("div");
-  bgVideoContainerNode.classList.add("bg-video-container");
-  document.body.appendChild(bgVideoContainerNode);
+import { imgHomeBg,videoHomeBg } from "./assetImports";
 
-  const bgOverlayNode = document.createElement("div");
-  bgOverlayNode.classList.add("bg-overlay");
-  bgVideoContainerNode.appendChild(bgOverlayNode);
-
+export const pageBackground = (() => {
   const bgVideoNode = document.createElement("video");
-  bgVideoNode.id = "bg-video";
-  bgVideoNode.setAttribute("autoplay", "");
-  bgVideoNode.setAttribute("loop", "");
-  bgVideoNode.setAttribute("muted", "");
-  bgVideoNode.src = bgVideo;
-  bgOverlayNode.appendChild(bgVideoNode);
-
   const bgImageNode = document.createElement("img");
-  bgImageNode.id = "bg-image";
-  bgImageNode.classList.add("bg-static-img");
-  bgImageNode.src = bgImg;
-  bgOverlayNode.appendChild(bgImageNode);
-}
+
+  const init = () => {
+    const bgVideoContainerNode = document.createElement("div");
+    const bgOverlayNode = document.createElement("div");
+
+    bgVideoContainerNode.classList.add("bg-video-container");
+    document.body.appendChild(bgVideoContainerNode);
+
+    bgOverlayNode.classList.add("bg-overlay");
+    bgVideoContainerNode.appendChild(bgOverlayNode);
+
+    bgVideoNode.id = "bg-video";
+    bgVideoNode.setAttribute("autoplay", "");
+    bgVideoNode.setAttribute("loop", "");
+    bgVideoNode.setAttribute("muted", "");
+    bgVideoNode.src = videoHomeBg;
+    bgOverlayNode.appendChild(bgVideoNode);
+
+    bgImageNode.id = "bg-image";
+    bgImageNode.classList.add("bg-static-img");
+    bgImageNode.src = imgHomeBg;
+    bgOverlayNode.appendChild(bgImageNode);
+  }
+
+  const setPageBg = (bgImg, hideVideo = false, bgVideo = videoHomeBg) => {
+    bgImageNode.src = bgImg;
+    bgVideoNode.src = bgVideo;
+    bgVideoNode.style.visibility = hideVideo ? "hidden" : "visible";
+  }
+  
+  return {init, setPageBg};
+})()

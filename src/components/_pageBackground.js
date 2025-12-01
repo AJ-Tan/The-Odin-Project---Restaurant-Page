@@ -10,7 +10,7 @@ export const pageBackground = (() => {
     const bgVideoContainerNode = document.createElement("div");
     const bgOverlayNode = document.createElement("div");
 
-    bgVideoContainerNode.classList.add("bg-video-container");
+    bgVideoContainerNode.classList.add("bg-container");
     document.body.appendChild(bgVideoContainerNode);
 
     bgOverlayNode.classList.add("bg-overlay");

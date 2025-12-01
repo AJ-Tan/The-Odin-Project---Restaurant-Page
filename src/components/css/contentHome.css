@@ -1,9 +1,9 @@
-.div-content:has(.home-container) {
+.div-content:has(.home) {
   align-self: center;
   justify-self: center;
 }
 
-.home-container {
+.home {
   display: grid;
   justify-items: center;
   gap: 2.5rem;

@@ -4,9 +4,9 @@ import { btnAnimatedBg,btnBorder,homeText,imgHomeBg,videoHomeBg } from "./assetI
 
 
 export const contentHome = () => {
-  pageBackground.setPageBg(imgHomeBg, false);
-  const homeContainerNode = document.createElement("div");
-  homeContainerNode.classList.add("home-container");
+  pageBackground.setPageBg(imgHomeBg, false, videoHomeBg);
+  const homeContainerNode = document.createElement("section");
+  homeContainerNode.classList.add("home");
 
   const homeImgNode = document.createElement("img");
   homeImgNode.classList.add("home-img");

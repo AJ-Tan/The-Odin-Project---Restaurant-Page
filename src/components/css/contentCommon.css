@@ -12,7 +12,7 @@ body {
 }
 
 .main-header-container, .content-section-container {
-  width: clamp(40rem, 80vw, 70rem);
+  width: clamp(40rem, 80vw, 75rem);
   
   @media screen and (max-width: 42.5em) {
     width: 100%;
@@ -23,7 +23,7 @@ body {
   margin-block-start: 6rem;
   margin-block-end: 2rem;
   color: white;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw,1.7rem);
 }
 
 .content-section {
@@ -34,11 +34,12 @@ body {
 
 .content-header {
   padding-block-end: 2rem;
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 1.3vw,1.5rem);
 }
 
 .content-text-group {
   display: grid;
   gap: 1rem;
   line-height: 1.7;
+  font-size: clamp(0.85rem, 1.17vw,1.35rem);
 }

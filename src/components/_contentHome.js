@@ -1,10 +1,11 @@
 import "./css/contentHome.css";
 import { pageBackground } from "./_pageBackground";
-import { btnAnimatedBg,btnBorder,homeText,imgHomeBg,videoHomeBg } from "./assetImports";
+import { btnAnimatedBg,btnBorder,homeText,nightSkyBg,videoHomeBg } from "./assetImports";
 import { contentRoute } from "./contentRoute";
 
 export const contentHome = () => {
-  pageBackground.setPageBg(imgHomeBg, false, videoHomeBg);
+  pageBackground.setPageBg(nightSkyBg, false, videoHomeBg);
+
   const homeContainerNode = document.createElement("section");
   homeContainerNode.classList.add("home");
 

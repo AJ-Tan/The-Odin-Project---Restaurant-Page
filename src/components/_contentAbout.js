@@ -1,6 +1,6 @@
 import "./css/contentAbout.css";
 import { pageBackground } from "./_pageBackground";
-import { nightSkyBg } from "./assetImports";
+import { nightSkyBg, aboutUsImg } from "./assetImports";
 import { dataAboutContent } from "./contentData/dataAbout";
 
 export const contentAbout = () => {
@@ -50,6 +50,11 @@ export const contentAbout = () => {
     contentTestNode.textContent = val;
     contentTextGroup.appendChild(contentTestNode);
   })
+
+  const aboutUsImgNode = document.createElement("img");
+  aboutUsImgNode.classList.add("about-img");
+  aboutUsImgNode.src = aboutUsImg;
+  contentSectionContainer.appendChild(aboutUsImgNode);
 
   return mainNode;
 }

@@ -29,21 +29,21 @@ export const contentAbout = () => {
   contentSectionContainer.classList.add("content-section-container");
   contentSection.appendChild(contentSectionContainer);
 
-  const contentHeaderNode = document.createElement("div");
+  const contentSectionItemNode = document.createElement("div");
+  contentSectionItemNode.classList.add("content-section-item");
+  contentSectionContainer.appendChild(contentSectionItemNode);
+
+  const contentHeaderNode = document.createElement("header");
   contentHeaderNode.classList.add("content-header");
-  contentSectionContainer.appendChild(contentHeaderNode);
+  contentSectionItemNode.appendChild(contentHeaderNode);
 
   const contentHeaderTextNode = document.createElement("h2");
   contentHeaderTextNode.textContent = dataAboutContent.contentHeader;
   contentHeaderNode.appendChild(contentHeaderTextNode);
 
-  const contentBodyNode = document.createElement("div");
-  contentBodyNode.classList.add("content-body");
-  contentSectionContainer.appendChild(contentBodyNode);
-
   const contentTextGroup = document.createElement("div");
   contentTextGroup.classList.add("content-text-group");
-  contentSectionContainer.appendChild(contentTextGroup);
+  contentSectionItemNode.appendChild(contentTextGroup);
 
   dataAboutContent.contentText.forEach(val => {
     const contentTestNode = document.createElement("p");
@@ -54,7 +54,7 @@ export const contentAbout = () => {
   const aboutUsImgNode = document.createElement("img");
   aboutUsImgNode.classList.add("about-img");
   aboutUsImgNode.src = aboutUsImg;
-  contentSectionContainer.appendChild(aboutUsImgNode);
+  contentSectionItemNode.appendChild(aboutUsImgNode);
 
   return mainNode;
 }

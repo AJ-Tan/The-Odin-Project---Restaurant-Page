@@ -28,6 +28,7 @@ import menuSonglotusCake from "../asset/images/menu/Item_Songlotus_Cake.webp";
 import menuSteamedPuffergoatMilk from "../asset/images/menu/Item_Steamed_Puffergoat_Milk.webp";
 import menuStoneGrilledOlm from "../asset/images/menu/Item_Stone-Grilled_Olm.webp";
 import menuTuskpirWrap from "../asset/images/menu/Item_Tuskpir_Wrap.webp";
+import menuBackground from "../asset/images/menu/Background_Item.webp";
 
 
-export { pageLogo, pageHeaderBg, imgHomeBg, videoHomeBg, homeText, btnAnimatedBg, btnStaticBg, btnBorder, nightSkyBg, aboutUsImg, menuBelabogSausage,menuBottledSoda,menuComfortFood,menuCosmicFriedRice,menuCrystalLizardSatay,menuDeepFriedRockCrab,menuDietFriedRice,menuMungBeanSoda,menuRyeBreadSodaIceberg,menuSnapperJamAppetizer,menuSnowPlainsStew,menuSonglotusCake,menuSteamedPuffergoatMilk,menuStoneGrilledOlm,menuTuskpirWrap};
+export { pageLogo, pageHeaderBg, imgHomeBg, videoHomeBg, homeText, btnAnimatedBg, btnStaticBg, btnBorder, nightSkyBg, aboutUsImg, menuBelabogSausage,menuBottledSoda,menuComfortFood,menuCosmicFriedRice,menuCrystalLizardSatay,menuDeepFriedRockCrab,menuDietFriedRice,menuMungBeanSoda,menuRyeBreadSodaIceberg,menuSnapperJamAppetizer,menuSnowPlainsStew,menuSonglotusCake,menuSteamedPuffergoatMilk,menuStoneGrilledOlm,menuTuskpirWrap,menuBackground};

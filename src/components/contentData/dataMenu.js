@@ -7,6 +7,25 @@ export const dataMenuContent = {
     `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, non harum animi praesentium blanditiis itaque corrupti at, sequi quis, sunt architecto porro consequatur reiciendis. Odio, dolor ad. Soluta, dolorem et.`,
     `QWE Cumque minus maiores voluptatibus recusandae ex? Id voluptas unde ea, dolorum consectetur, minus placeat sit hic saepe neque culpa quibusdam incidunt et recusandae ex dolor, voluptates nesciunt assumenda ratione corrupti.`
   ],
+  menuTypes: [
+    {
+      type: "rice",
+      header: "Rice"
+    },
+    {
+      type: "dish",
+      header: "Dish"
+    },
+    {
+      type: "dessert",
+      header: "Dessert"
+    },
+    {
+      type: "beverage",
+      header: "Beverage"
+    }
+  ]
+  ,
   // Price in string for display only
   menuList: [
     {
@@ -108,7 +127,7 @@ export const dataMenuContent = {
       type: "beverage"
     },
     {
-      name: "Steamed Puffergoat Milk (Hot Beverage)",
+      name: "Steamed Puffergoat Milk",
       description: "A warm, creamy drink — comforting and wholesome, ideal after a heavy meal or during a chilly evening.",
       price: "₱110",
       img: menuSteamedPuffergoatMilk,

@@ -19,11 +19,17 @@ body {
   }
 }
 
+.content-section-container {
+  display: grid;
+  gap: 3rem;
+}
+
 .main-header {
   margin-block-start: 6rem;
   margin-block-end: 2rem;
   color: white;
-  font-size: clamp(1.2rem, 1.5vw,1.7rem);
+  font-size: 1.8rem;
+  /* font-size: clamp(1.3rem, 1.6vw,1.8rem); */
 }
 
 .content-section {
@@ -34,7 +40,23 @@ body {
 
 .content-header {
   padding-block-end: 2rem;
-  font-size: clamp(1rem, 1.3vw,1.5rem);
+  font-size: 1.6rem;
+  /* font-size: clamp(1.1rem, 1.4vw,1.6rem); */
+
+  h2 {
+    position: relative;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: clamp(-0.7rem, -0.6vw, 0.2rem);
+    left: 0;
+    border-top-right-radius: 1rem;
+    width: clamp(0.5rem, 0.9vw ,1rem);
+    aspect-ratio: 3.1/1;
+    background-color: rgb(102, 102, 255);
+  }
 }
 
 .content-text-group {

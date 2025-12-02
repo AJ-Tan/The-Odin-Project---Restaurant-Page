@@ -1,0 +1,59 @@
+.menu-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0rem, 23rem));
+  gap: 2rem;
+
+  @media screen and (max-width: 60em) {
+    justify-content: center;
+  }
+}
+
+.menu-item {
+  border: 1px solid rgb(197, 197, 197);
+  display: grid;
+  grid-template-rows: 20rem 1fr;
+  box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.25);
+}
+
+.menu-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-details {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.menu-name {
+  font-size: 1.7rem;
+}
+
+.menu-description {
+  font-size: 1.2rem;
+}
+
+.btn-menu {
+  border: 2px solid #3B82F6;
+  color: #3B82F6;
+  background-color: transparent;
+  border-radius: 2rem;
+  margin-block-start: 1rem;
+  max-width: 11rem;
+  padding-block: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: #3B82F6;
+    color: white;
+  }
+}

@@ -1,9 +1,9 @@
-import "./css/contentAbout.css";
+
 import { pageBackground } from "./_pageBackground";
 import { nightSkyBg } from "./assetImports";
-import { dataAboutContent } from "./contentData/dataAbout";
+import { dataMenuContent } from "./contentData/dataMenu";
 
-export const contentAbout = () => {
+export const contentMenu = () => {
   pageBackground.setPageBg(nightSkyBg, true);
 
   const mainNode = document.createElement("section");
@@ -18,7 +18,7 @@ export const contentAbout = () => {
   mainHeaderNode.appendChild(mainHeaderContainer);
 
   const mainHeaderTextNode = document.createElement("h1");
-  mainHeaderTextNode.textContent = dataAboutContent.pageHeader;
+  mainHeaderTextNode.textContent = dataMenuContent.pageHeader;
   mainHeaderContainer.appendChild(mainHeaderTextNode);
 
   const contentSection = document.createElement("section");
@@ -34,7 +34,7 @@ export const contentAbout = () => {
   contentSectionContainer.appendChild(contentHeaderNode);
 
   const contentHeaderTextNode = document.createElement("h2");
-  contentHeaderTextNode.textContent = dataAboutContent.contentHeader;
+  contentHeaderTextNode.textContent = dataMenuContent.contentHeader;
   contentHeaderNode.appendChild(contentHeaderTextNode);
 
   const contentBodyNode = document.createElement("div");
@@ -45,7 +45,7 @@ export const contentAbout = () => {
   contentTextGroup.classList.add("content-text-group");
   contentSectionContainer.appendChild(contentTextGroup);
 
-  dataAboutContent.contentText.forEach(val => {
+  dataMenuContent.contentText.forEach(val => {
     const contentTestNode = document.createElement("p");
     contentTestNode.textContent = val;
     contentTextGroup.appendChild(contentTestNode);

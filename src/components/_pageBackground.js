@@ -1,6 +1,6 @@
 import "./css/pageBackground.css";
 
-import { imgHomeBg,videoHomeBg } from "./assetImports";
+import { imgHomeBg, nightSkyBg,videoHomeBg } from "./assetImports";
 
 export const pageBackground = (() => {
   const bgVideoNode = document.createElement("video");
@@ -17,22 +17,23 @@ export const pageBackground = (() => {
     bgVideoContainerNode.appendChild(bgOverlayNode);
 
     bgVideoNode.id = "bg-video";
-    bgVideoNode.setAttribute("autoplay", "");
-    bgVideoNode.setAttribute("loop", "");
-    bgVideoNode.setAttribute("muted", "");
+    bgVideoNode.autoplay = true;
+    bgVideoNode.loop = true;
+    bgVideoNode.muted = true;          
+    bgVideoNode.playsInline = true;
     bgVideoNode.src = videoHomeBg;
     bgOverlayNode.appendChild(bgVideoNode);
 
     bgImageNode.id = "bg-image";
     bgImageNode.classList.add("bg-static-img");
-    bgImageNode.src = imgHomeBg;
+    bgImageNode.src = nightSkyBg;
     bgOverlayNode.appendChild(bgImageNode);
   }
 
   const setPageBg = (bgImg, hideVideo = false, bgVideo = videoHomeBg) => {
     bgImageNode.src = bgImg;
-    bgVideoNode.src = bgVideo;
     bgVideoNode.style.visibility = hideVideo ? "hidden" : "visible";
+    bgVideoNode.src = bgVideo;
   }
   
   return {init, setPageBg};

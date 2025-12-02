@@ -1,7 +1,7 @@
 import "./css/contentHome.css";
 import { pageBackground } from "./_pageBackground";
 import { btnAnimatedBg,btnBorder,homeText,imgHomeBg,videoHomeBg } from "./assetImports";
-
+import { contentRoute } from "./contentRoute";
 
 export const contentHome = () => {
   pageBackground.setPageBg(imgHomeBg, false, videoHomeBg);
@@ -15,6 +15,9 @@ export const contentHome = () => {
 
   const homeButtonNode = document.createElement("button");
   homeButtonNode.classList.add("btn-home");
+  homeButtonNode.addEventListener("click", () => {
+    contentRoute("menu");
+  })
   homeContainerNode.appendChild(homeButtonNode);
 
   const buttonAnimatedBGNode = document.createElement("img");

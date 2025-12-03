@@ -36,6 +36,11 @@
   font-size: 1.7rem;
 }
 
+.menu-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .menu-description {
   font-size: 1.2rem;
 }

@@ -11,7 +11,7 @@
 }
 
 .home-img {
-  width: clamp(22rem, 52.5vw,45rem);
+  width: clamp(20rem, 47vw + 5.2rem,45rem);
 }
 
 .btn-home {

@@ -6,11 +6,12 @@
 .home {
   display: grid;
   justify-items: center;
-  gap: 2.5rem;
+  /* 1.25 2.5 */
+  gap: clamp(1.25rem, 2.48vw,2.5rem);
 }
 
 .home-img {
-  width: 45rem;
+  width: clamp(22rem, 52.5vw,45rem);
 }
 
 .btn-home {
@@ -20,7 +21,8 @@
   justify-content: center;
   border: none;
   background-color: transparent;
-  width: 20rem;
+  /* 12 20 */
+  width: clamp(12rem, 23.6vw,20rem);
 }
 
 .btn-border {
@@ -30,6 +32,8 @@
 .btn-home-text {
   position: absolute;
   color: white;
-  font-size: 1.5rem;
+  letter-spacing: 1px;
+  /* 0.9 1.5 */
+  font-size: clamp(0.9rem, 1.76vw,1.5rem);
   font-weight: 600;
 }

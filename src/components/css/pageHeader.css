@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  aspect-ratio: 100/4;
+  height: clamp(2.3rem, 5.3vw ,4.5rem);
 }
 
 .page-logo {
@@ -8,12 +8,19 @@
   top: clamp(0.1rem, 0.9vw ,1rem);
   left: 3rem;
   width: clamp(2rem, 16vw ,18rem);
+
+  @media screen and (max-width: 35.3125em) {
+    display: none;
+  }
 }
 
 .page-nav {
   display: flex;
   align-items: center;
   justify-content: end;
+  @media screen and (max-width: 35.3125em) {
+    justify-content: center;
+  }
 
   padding-inline: 1rem;
   height: 100%;
@@ -25,6 +32,7 @@
 .nav-list {
   display: flex;
   list-style-type: none;
+  align-items: center;
   margin-block-start: -0.25rem;
   height: 100%;
   max-height: 3.5rem;
@@ -46,4 +54,27 @@
   span {
     font-size: clamp(0.5rem, 2vw, 1.25rem);
   }
+}
+
+.btn-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  margin-inline: -0.2rem;
+  transition: transform 0.1s ease-in-out;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btn-header-text {
+  position: absolute;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
 }

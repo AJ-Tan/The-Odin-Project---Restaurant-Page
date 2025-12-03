@@ -63,5 +63,5 @@ body {
   display: grid;
   gap: 1rem;
   line-height: 1.7;
-  font-size: clamp(0.85rem, 1.17vw,1.35rem);
+  font-size: clamp(1.1rem, 1.62vw,1.35rem);
 }
